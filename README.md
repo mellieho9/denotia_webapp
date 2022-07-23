@@ -1,9 +1,7 @@
 # Denotia
 Denotia is a web app to predict rare neurological diseases from MRI scans.
 
-[Web Application](https://denotia.herokuapp.com/) | 
-
-[MIT Solve Submission](https://solve.mit.edu/challenges/horizonprize/solutions/51857)
+[Web Application](https://denotia.herokuapp.com/) | [MIT Solve Submission](https://solve.mit.edu/challenges/horizonprize/solutions/51857)
 
 Software used: Python, Freesurfer, GrayNet, PyTorch Geometric, Bootstrap, Heroku.
 
