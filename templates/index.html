@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel = "shortcut icon" type="image/jpg" href = "{{url_for('static', filename='dark.png')}}">
+
+<style>
+body,h1 {
+    font-family: "Work Sans"; 
+    color: white; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+body, html {height: 100%; background-color: #101010; overflow-y: hidden;}
+
+p {font-family: "Work Sans"; padding-top: 9%; font-size: 4.5rem; margin-bottom: 2%;}
+
+input {
+    size: 100px; 
+    font-family: 'Open Sans';
+}
+
+.header {
+    padding-top: 0.5%;
+    font-weight: normal;
+}
+
+.x {
+    font-family: 'Work Sans';
+}
+
+.footer {
+    font-weight: normal;
+    padding-top: 10rem;
+}
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  transition: 1s;
+}
+
+.link:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+}
+</style>
+
+<!---- Flask part -->
+
+<title> Denotia WebApp </title>
+
+<body>
+    <h3 class = header><a href = "{{ url_for ('faq') }}" class = link>Frequently Asked Questions</a> | <a href = "{{ url_for ('about') }}" class = link>About Us</a></h3>
+<p>Denotia WebApp</p>
+<hr width="50%">
+<h1> Upload MRI Scan for Detection </h1>
+<form method = post enctype = multipart/form-data>
+    <input type = file name = MRI class = "x" accept = ".csv">
+    <a href = "{{ url_for ('result') }}"><input type = button value = Predict></a> 
+</form>
+<h3 class = 'footer'> Powered by Pytorch, Flask, and Bootstrap </h3>
+
+</body>
+</html>

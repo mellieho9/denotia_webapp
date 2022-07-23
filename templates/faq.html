@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel = "shortcut icon" type="image/jpg" href = "{{url_for('static', filename='dark.png')}}">
+
+<style>
+body,h1 {
+    font-family: "Work Sans"; 
+    color: white; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-weight: bold;
+}
+
+body, html {height: 100%; background-color: #101010;}
+
+.x1 {font-family: "Work Sans"; padding-top: 0%; font-size: 40px; margin-bottom: 1.2%;}
+
+.x2 {font-family: "Work Sans"; padding-top: 0.5%; font-size: 20px; text-align: left; margin-left: 15%;}
+
+.x3 {font-family: "Open Sans"; ; font-size: 16px; text-align: left; margin-left: 15%; margin-right: 15%; font-weight: normal}
+
+input {
+    size: 100px; 
+    font-family: 'Work Sans';
+}
+
+.header {
+    padding-top: 0.5%;
+    font-weight: normal;
+}
+
+.x {
+    font-family: 'Work Sans';
+}
+
+.footer {
+    padding-top: 10%; 
+    font-weight: normal;
+}
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  transition: 1s;
+}
+
+
+.link:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+  
+}
+
+.link1 {
+    border-bottom: 1px solid white;
+}
+
+.link1:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+  
+}
+</style>
+
+<!---- Flask part -->
+
+<title> Denotia WebApp </title>
+
+<body>
+<h3 class = header><a href = "{{ url_for ('index') }}" class = link>Home</a> | <a href = "{{ url_for ('about') }}" class = link>About Us</a></h3>
+<p class = x1> Frequently Asked Questions </p>
+
+<p class = x2> > What is Denotia? </p>
+<hr width="70%">
+<p class = x3> Denotia is a web-based application that uses an image-classifying deep learning model to predict rare neurological diseases from brain scans, such as MRI. Read more <a href = "https://solve.mit.edu/challenges/horizonprize/solutions/51857" target ="_blank" class = "link1">here</a>. </p>
+
+<p class = x2> > How does it work? </p>
+<hr width="70%">
+<p class = x3> Our model was built on Python and trained using scans from <a href = "https://cind.ucsf.edu/research/grants/frontotemporal-lobar-degeneration-neuroimaging-initiative-0" class = "link1" target = "_blank">NIFD</a>, the largest database for FTD scans. It has learnt to recognize surrogate markers of FTD and continuously improves, thereby aiding in diagnosis.
+</p>
+
+<p class = x2> > How do I use Denotia? </p>
+<hr width="70%">
+<p class = x3> Simple! Just go to our <a href = "{{ url_for ('index') }}" class = link1>homepage</a>, upload your scan and click upload. Once processed, you'll be able to view the algorithm's prediction. </p>
+
+<p class = x2> > Why use Denotia? </p>
+<hr width="70%">
+<p class = x3> High case loads and overburdened healthcare infrastructure require AI-driven interventions. Moreover, neurological conditions may progress clinically without being detected radiologically to the untrained eye as the changes are too subtle. Deep learning spots these changes. In short, it assists the clinician in navigating the diagnostic process and reduces operating costs for hospitals and clinics. </p>
+
+<p class = x2> > What is the Alzheimer’s disease? </p>
+<hr width="70%">
+<p class = x3> Alzheimer's disease is a progressive neurologic disorder that leads to loss of nerve cells, causing the brain to shrink (atrophy) and a continuous decline in thinking, behavioral and social skills. </p>
+
+<p class = x2> > What is FTD/FTLD? </p>
+<hr width="70%">
+<p class = x3> Frontotemporal dementia/lobar degeneration occurs when nerve cells in the frontal and temporal lobes of the brain are lost, affecting behavior, personality, language, and movement. Despite being a <a href = "https://rarediseases.org/rare-diseases/frontotemporal-degeneration/" target ="_blank" class = "link1">rare disease</a>, it is the second most common form of dementia for people under 65. It usually occurs between 40 to 75 and often goes misdiagnosed/undiagnosed. As it is irreversible, it is important to classify it at an early stage to ensure specific interventions, timely management with symptomatic treatment, and caregiver sensitization. </p>
+
+<p class = x2> > What is MRI? </p>
+<hr width="70%">
+<p class = x3> Magnetic resonance imaging (MRI) is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body. Using strong magnetic fields, MRI scanners produce detailed images of the brain in a safe and painless manner. </p>
+
+<p class = x2> Is the diagnosis confirmed? </p>
+<hr width="70%">
+<p class = x3> Partly. For neurological diseases, both clinical and radiological validation is required. Our tool helps radiologists provide quantitative evidence to corroborate clinical findings. Contact your healthcare practitioner for detailed guidance. </p>
+<p class = x2> > What’s next?</p>
+<hr width="70%">
+<p class = x3> Once a scan is classified as positive or progressive, the radiologist informs all clinicians and healthcare providers. This will be followed up by therapy and symptomatic medication, lifestyle and home remedies, and counselling sessions. </p>
+
+<br>
+</body>
+</html>

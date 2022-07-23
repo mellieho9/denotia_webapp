@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href = "https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link href = "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel = "shortcut icon" type="image/jpg" href = "{{url_for('static', filename='dark.png')}}">
+<script src="https://kit.fontawesome.com/5e4239a5eb.js" crossorigin="anonymous"></script>
+
+<style>
+body,h1 {
+    font-family: "Work Sans"; 
+    color: white; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-weight: bold;
+}
+
+body, html {height: 100%; background-color: #101010;}
+
+.x1 {font-family: "Work Sans"; padding-top: 0%; font-size: 40px; margin-bottom: 1.2%;}
+
+.x2 {font-family: "Work Sans"; font-size: 18px; text-align: center; padding-top: 0px}
+
+.x3 {font-family: "Open Sans"; font-size: 14px; text-align: center; font-weight: normal;}
+
+input {
+    size: 100px; 
+    font-family: 'Work Sans';
+}
+
+.header {
+    padding-top: 0.5%;
+    font-weight: normal;
+}
+
+.x {
+    font-family: 'Work Sans';
+}
+
+.footer {
+    padding-top: 10%; 
+    font-weight: normal;
+}
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  transition: 1s;
+}
+
+.link:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+  
+}
+
+.link1 {
+    border-bottom: 1px solid white;
+}
+
+.link1:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+}
+
+.our_team {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team_member {
+    width: 242px;
+    margin: 15px;
+    background-color: #F8F0E3;
+    color: black;
+    border-radius: 20px;
+    padding: 20px 10px;
+}
+
+.member_img {
+    max-width: 180px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: #F8F0E3;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+img {
+    margin: 0 auto;
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.social_media {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 95%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s ease;
+    transform: scale(0);
+}
+
+.member_img:hover .social_media{
+    transform: scale(1)
+}
+
+.social_media .item {
+    margin: 0 10px;
+}
+
+.fab, .fas {
+    font-size: 25px;
+    color: #F8F0E3
+}
+
+.fab:hover, .fas:hover {
+    color: #a9a9a9;
+    transition: all 0.4s ease;
+}
+
+</style>
+
+<!---- Flask part -->
+
+<title> Denotia WebApp </title>
+
+<body>
+<h3 class = header><a href = "{{ url_for ('index') }}" class = link>Home</a> | <a href = "{{ url_for ('faq') }}" class = link>Frequently Asked Questions</a></h3>
+
+<p class = x1> Team Denotia </p>
+
+<div class = "our_team">
+    
+    <div class = "team_member">
+        <div class = "member_img">
+          <img src = "{{url_for('static', filename='vishnu.jpg')}}">
+          <div class = "social_media">
+            <div class = "item"><a href = "mailto:vishnuramsampathkumar@gmail.com" target = "_blank"><i class="fas fa-envelope"></i></a></div>
+            <div class = "item"><a href = "https://www.linkedin.com/in/vishnu-sampathkumar-342aa9157" target = "_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class = "item"><a href = "https://github.com/VishnuDaBoss" target = "_blank"><i class="fab fa-github"></i></a></div>
+          </div>
+        </div>
+          <p class = "x2"> Vishnu Sampathkumar </p>
+          <p class = "x3">
+            Vishnu is a high school senior at National Public School, Bangalore, India. 
+            His research interests include computational neuroscience and linguistics, and he has previously worked on ADiag, an AI-powered Alzheimer's Disease prediction tool. 
+            In his free time, he sings Carnatic (Indian classical) vocal, and studies political philosophy. 
+          </p>      
+    </div>
+
+    <div class = "team_member">
+        <div class = "member_img">
+          <img src = "{{url_for('static', filename='aranyo.jpg')}}">
+          <div class = "social_media">
+            <div class = "item"><a href = "mailto:aranyoray@gmail.com" target = "_blank"><i class="fas fa-envelope"></i></a></div>
+            <div class = "item"><a href = "https://www.linkedin.com/in/aranyo-ray/" target = "_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class = "item"><a href = "https://www.instagram.com/_aranyo_/" target = "_blank"><i class="fab fa-instagram"></i></a></div>
+          </div>
+        </div>
+          <p class = "x2"> Aranyo Ray </p>
+          <p class = "x3">
+            Aranyo is an incoming freshman at Yale University from Kolkata, India. 
+            He has previously worked on a culturally adapted screening game app for autism spectrum disorder. 
+            Passionate about neuroscience and psychology, he writes and advocates for mental health awareness in his free time.
+          </p>      
+    </div>
+
+    <div class = "team_member">
+        <div class = "member_img">
+          <img src = "{{url_for('static', filename='anaya.jpg')}}">
+          <div class = "social_media">
+            <div class = "item"><a href = "mailto:ag8285@nyu.edu" target = "_blank"><i class="fas fa-envelope"></i></a></div>
+            <div class = "item"><a href = "https://www.linkedin.com/in/anayagupta/" target = "_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class = "item"><a href = "https://www.instagram.com/anaya_gupta/" target = "_blank"><i class="fab fa-instagram"></i></a></div>
+          </div>
+        </div>
+          <p class = "x2"> Anaya Gupta </p>
+          <p class = "x3">
+            Anaya is an incoming freshman at the Stern School of Business. 
+            Her passion lies in employing marketing and financial tactics to sustainably grow businesses. 
+            She enjoys exploring the intersection between business and sustainability and has conducted research and launched a startup within this sphere. 
+          </p>      
+    </div>
+
+    <div class = "team_member">
+        <div class = "member_img">
+          <img src = "{{url_for('static', filename='june.jpg')}}">
+          <div class = "social_media">
+            <div class = "item"><a href = "mailto:nganho05060809@gmail.com" target = "_blank"><i class="fas fa-envelope"></i></a></div>
+            <div class = "item"><a href = "https://www.linkedin.com/in/ngan-ho-3027461a4/" target = "_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class = "item"><a href = "https://www.instagram.com/june.hoooo/" target = "_blank"><i class="fab fa-instagram"></i></a></div>
+          </div>
+        </div>
+          <p class = "x2"> June Ho </p>
+          <p class = "x3">
+            June is an incoming freshman at Fordham University from Ho Chi Minh City, Vietnam. 
+            A biotechnology enthusiast, June previously worked on a deep-learning mobile app for melanoma diagnosis and is now helping to optimize the FTLD-classification model at Denotia. 
+            In her free time, she manages her STEMEd nonprofit, WiTech Vietnam. 
+          </p>      
+    </div>
+
+    <div class = "team_member">
+        <div class = "member_img">
+          <img src = "{{url_for('static', filename='naman.jpg')}}">
+          <div class = "social_media">
+            <div class = "item"><a href = "mailto:modani.naman@gmail.com" target = "_blank"><i class="fas fa-envelope"></i></a></div>
+            <div class = "item"><a href = "https://www.linkedin.com/in/namanmodani/" target = "_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class = "item"><a href = "https://github.com/namanmodani" target = "_blank"><i class="fab fa-github"></i></a></div>
+          </div>
+        </div>
+          <p class = "x2"> Naman Modani </p>
+          <p class = "x3">
+            Naman is an incoming freshman at the University of California, Los Angeles.
+            His research interests include fintech and blockchain. A programming enthusiast, he has worked with several open-source organisations, notably Copyleft Games.
+            Naman spends his free time managing his edtech venture, Sandhi - The Connect.
+
+        </p>      
+    </div>
+
+</div>
+
+</body>
+</html>

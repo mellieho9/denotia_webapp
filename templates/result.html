@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel = "shortcut icon" type="image/jpg" href = "{{url_for('static', filename='dark.png')}}">
+
+
+<style>
+body,h1 {
+    font-family: "Work Sans"; 
+    color: white; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-weight: bold;
+}
+
+h2 {
+  font-family: "Work Sans"; 
+  color: white; 
+  text-align: center; 
+  vertical-align: middle; 
+  font-weight: bold;
+}
+
+body, html {height: 100%; background-color: #101010; overflow-y: hidden;}
+
+p {font-family: "Work Sans"; padding-top: 4%; font-size: 4.5rem; margin-bottom: 2%;}
+
+input {
+    size: 100px; 
+    font-family: 'Open Sans';
+}
+
+.header {
+    padding-top: 0.5%;
+    font-weight: normal;
+}
+
+.x {
+    font-family: 'Work Sans';
+}
+
+.footer {
+    font-weight: normal;
+    margin-top: 7.8rem;
+}
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  transition: 1s;
+  
+}
+
+.link:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+}
+
+.subtype {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 110%;
+  line-height: 1rem;
+}
+
+.ftld {
+  margin-top: 2.5rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.alz {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+</style>
+
+<!---flask--->
+
+<title>Denotia WebApp</title>
+
+<body>
+  
+<h3 class = header><a href = "{{ url_for ('faq') }}" class = link>Frequently Asked Questions</a> | <a href = "{{ url_for ('about') }}" class = link>About Us</a></h3>
+
+<p> Scan Results </p>
+<hr width="50%">
+<h2 class = ftld> Frontotemporal dementia: Negative </h2>  
+<h2 class = subtype> Behavior variant FTD: Negative </h2>
+<h2 class = subtype> Semantic variant FTD: Negative </h2>
+<h2 class = subtype> Progressive nonfluent aphasia (PNFA): Negative </h2>
+<h2 class = alz> Alzheimer's disease: Negative </h2>
+<a href = "{{ url_for ('index') }}"><input type = button value = 'Go Back'></a>
+<h3 class = footer> Powered by Pytorch, Flask, and Bootstrap </h3>
+
+</body>
+</html>
